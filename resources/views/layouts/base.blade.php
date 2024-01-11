@@ -174,12 +174,29 @@
                                         </div>
                                         <div class="onhover-div profile-dropdown">
                                             <ul>
+                                                {{-- @guest --}}
                                                 <li>
-                                                <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-                                                </li>
+                                                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+                                                    </li>
+                                                    <li>
+                                                    <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                                                    </li>
+                                                {{-- @endguest --}}
+                                                
+                                                @auth
+                                                    
                                                 <li>
-                                                <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                                                    <!-- Authentication -->
+                                                    <form method="POST" action="{{ route('logout') }}" x-data>
+                                                        @csrf
+
+                                                        <x-responsive-nav-link href="{{ route('logout') }}"
+                                                                    @click.prevent="$root.submit();">
+                                                            {{ __('Log Out') }}
+                                                        </x-responsive-nav-link>
+                                                    </form>
                                                 </li>
+                                                @endauth
 
                                             </ul>
                                         </div>
@@ -462,7 +479,7 @@
     });
     </script>
     @stack('scripts')
-
+    @livewireScripts
 </body>
 
 </html>

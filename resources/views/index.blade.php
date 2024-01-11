@@ -1,5 +1,4 @@
-@extends('layouts.base')
-@section('content')
+<x-guest-layout>
 <!-- banner section start -->
 <section class="ratio2_1 banner-style-2 pt-0">
     <div class="container">
@@ -200,7 +199,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$8</div>
+                                <div class="theme-color">3200 LKR</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -265,7 +264,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$30</div>
+                                <div class="theme-color">3000</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -329,7 +328,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$28</div>
+                                <div class="theme-color">3000</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -367,7 +366,7 @@
                                 alt="">
                         </a>
                         <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
+                        <span class="background-text">Fashion</span>
                         <div class="label-block">
                             <span class="label label-theme">30% Off</span>
                         </div>
@@ -394,7 +393,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$4</div>
+                                <div class="theme-color">1500 </div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -417,7 +416,7 @@
                             </div>
                             <p class="font-light mb-sm-2 mb-0">Seller name</p>
                             <a href="product/details.html" class="font-default">
-                                <h5>Fuga Officia Quaerat Fugiat</h5>
+                                <h5>T-shirt</h5>
                             </a>
                         </div>
                     </div>
@@ -432,7 +431,7 @@
                                 alt="">
                         </a>
                         <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
+                        <span class="background-text">Fashion</span>
                         <div class="label-block">
                             <span class="label label-theme">30% Off</span>
                         </div>
@@ -459,7 +458,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$11</div>
+                                <div class="theme-color">5000</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -482,7 +481,7 @@
                             </div>
                             <p class="font-light mb-sm-2 mb-0">Seller name</p>
                             <a href="product/details.html" class="font-default">
-                                <h5>Doloremque Quibusdam Maxime Natus</h5>
+                                <h5>Jacket</h5>
                             </a>
                         </div>
                     </div>
@@ -497,7 +496,7 @@
                                 alt="">
                         </a>
                         <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
+                        <span class="background-text">Fashion</span>
                         <div class="label-block">
                             <span class="label label-theme">30% Off</span>
                         </div>
@@ -524,7 +523,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$19</div>
+                                <div class="theme-color">2000</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -547,7 +546,7 @@
                             </div>
                             <p class="font-light mb-sm-2 mb-0">Seller name</p>
                             <a href="product/details.html" class="font-default">
-                                <h5>Nihil Beatae Sit Sed</h5>
+                                <h5>T-shirt</h5>
                             </a>
                         </div>
                     </div>
@@ -562,7 +561,7 @@
                                 alt="">
                         </a>
                         <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
+                        <span class="background-text">Fashion</span>
                         <div class="label-block">
                             <span class="label label-theme">30% Off</span>
                         </div>
@@ -589,7 +588,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$4</div>
+                                <div class="theme-color">3000</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -612,7 +611,7 @@
                             </div>
                             <p class="font-light mb-sm-2 mb-0">Seller name</p>
                             <a href="product/details.html" class="font-default">
-                                <h5>Non Sed Tempora Accusamus</h5>
+                                <h5>Jeans</h5>
                             </a>
                         </div>
                     </div>
@@ -627,7 +626,7 @@
                                 alt="">
                         </a>
                         <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
+                        <span class="background-text">Fashion</span>
                         <div class="label-block">
                             <span class="label label-theme">30% Off</span>
                         </div>
@@ -654,7 +653,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$18</div>
+                                <div class="theme-color">2000</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -677,7 +676,7 @@
                             </div>
                             <p class="font-light mb-sm-2 mb-0">Seller name</p>
                             <a href="product/details.html" class="font-default">
-                                <h5>Odit Corporis Ut Pariatur</h5>
+                                <h5>T-shirt</h5>
                             </a>
                         </div>
                     </div>
@@ -692,7 +691,7 @@
                                 alt="">
                         </a>
                         <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
+                        <span class="background-text">Fashion</span>
                         <div class="label-block">
                             <span class="label label-theme">50% Off</span>
                         </div>
@@ -719,7 +718,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$25</div>
+                                <div class="theme-color">2500</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -758,7 +757,7 @@
                                 alt="">
                         </a>
                         <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
+                        <span class="background-text">Fashion</span>
                         <div class="label-block">
                             <span class="label label-theme">30% Off</span>
                         </div>
@@ -785,7 +784,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$7</div>
+                                <div class="theme-color">4000 </div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -808,7 +807,7 @@
                             </div>
                             <p class="font-light mb-sm-2 mb-0">Seller name</p>
                             <a href="product/details.html" class="font-default">
-                                <h5>Quidem Architecto Deleniti Hic</h5>
+                                <h5>Jacket</h5>
                             </a>
                         </div>
                     </div>
@@ -823,7 +822,7 @@
                                 alt="">
                         </a>
                         <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
+                        <span class="background-text">Fashion</span>
                         <div class="label-block">
                             <span class="label label-theme">30% Off</span>
                         </div>
@@ -850,7 +849,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$5</div>
+                                <div class="theme-color">1500</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -888,7 +887,7 @@
                                 alt="">
                         </a>
                         <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
+                        <span class="background-text">Fashion</span>
                         <div class="label-block">
                             <span class="label label-theme">30% Off</span>
                         </div>
@@ -915,7 +914,7 @@
                     <div class="product-style-3 product-style-chair">
                         <div class="product-title d-block mb-0">
                             <div class="r-price">
-                                <div class="theme-color">$21</div>
+                                <div class="theme-color">2000</div>
                                 <div class="main-price">
                                     <ul class="rating mb-1 mt-0">
                                         <li>
@@ -938,7 +937,7 @@
                             </div>
                             <p class="font-light mb-sm-2 mb-0">Seller name</p>
                             <a href="product/details.html" class="font-default">
-                                <h5>Excepturi Et In Cum</h5>
+                                <h5>Jacket</h5>
                             </a>
                         </div>
                     </div>
@@ -1006,7 +1005,7 @@
                         <div class="product-style-3 product-style-chair">
                             <div class="product-title d-block mb-0">
                                 <div class="r-price">
-                                    <div class="theme-color">$21</div>
+                                    <div class="theme-color">2000 </div>
                                     <div class="main-price">
                                         <ul class="rating mb-1 mt-0">
                                             <li>
@@ -1029,7 +1028,7 @@
                                 </div>
                                 <p class="font-light mb-sm-2 mb-0">Seller name</p>
                                 <a href="product/details.html" class="font-default">
-                                    <h5>Skater Seller name</h5>
+                                    <h5>Dress</h5>
                                 </a>
                             </div>
                         </div>
@@ -1072,7 +1071,7 @@
                         <div class="product-style-3 product-style-chair">
                             <div class="product-title d-block mb-0">
                                 <div class="r-price">
-                                    <div class="theme-color">$21</div>
+                                    <div class="theme-color">2000 </div>
                                     <div class="main-price">
                                         <ul class="rating mb-1 mt-0">
                                             <li>
@@ -1095,7 +1094,7 @@
                                 </div>
                                 <p class="font-light mb-sm-2 mb-0">Seller name</p>
                                 <a href="product/details.html" class="font-default">
-                                    <h5>Skater Seller name</h5>
+                                    <h5>Dress</h5>
                                 </a>
                             </div>
                         </div>
@@ -1138,7 +1137,7 @@
                         <div class="product-style-3 product-style-chair">
                             <div class="product-title d-block mb-0">
                                 <div class="r-price">
-                                    <div class="theme-color">$21</div>
+                                    <div class="theme-color">2000 </div>
                                     <div class="main-price">
                                         <ul class="rating mb-1 mt-0">
                                             <li>
@@ -1161,7 +1160,7 @@
                                 </div>
                                 <p class="font-light mb-sm-2 mb-0">Seller name</p>
                                 <a href="product/details.html" class="font-default">
-                                    <h5>Skater Seller name</h5>
+                                    <h5>Dress</h5>
                                 </a>
                             </div>
                         </div>
@@ -1204,7 +1203,7 @@
                         <div class="product-style-3 product-style-chair">
                             <div class="product-title d-block mb-0">
                                 <div class="r-price">
-                                    <div class="theme-color">$21</div>
+                                    <div class="theme-color">2000 </div>
                                     <div class="main-price">
                                         <ul class="rating mb-1 mt-0">
                                             <li>
@@ -1227,7 +1226,7 @@
                                 </div>
                                 <p class="font-light mb-sm-2 mb-0">Seller name</p>
                                 <a href="product/details.html" class="font-default">
-                                    <h5>Skater Seller name</h5>
+                                    <h5>Dress</h5>
                                 </a>
                             </div>
                         </div>
@@ -1270,7 +1269,7 @@
                         <div class="product-style-3 product-style-chair">
                             <div class="product-title d-block mb-0">
                                 <div class="r-price">
-                                    <div class="theme-color">$21</div>
+                                    <div class="theme-color">2000 </div>
                                     <div class="main-price">
                                         <ul class="rating mb-1 mt-0">
                                             <li>
@@ -1293,7 +1292,7 @@
                                 </div>
                                 <p class="font-light mb-sm-2 mb-0">Seller name</p>
                                 <a href="product/details.html" class="font-default">
-                                    <h5>Skater Seller name</h5>
+                                    <h5>Dress</h5>
                                 </a>
                             </div>
                         </div>
@@ -1336,7 +1335,7 @@
                         <div class="product-style-3 product-style-chair">
                             <div class="product-title d-block mb-0">
                                 <div class="r-price">
-                                    <div class="theme-color">$21</div>
+                                    <div class="theme-color">2000 </div>
                                     <div class="main-price">
                                         <ul class="rating mb-1 mt-0">
                                             <li>
@@ -1359,7 +1358,7 @@
                                 </div>
                                 <p class="font-light mb-sm-2 mb-0">Seller name</p>
                                 <a href="product/details.html" class="font-default">
-                                    <h5>Skater Seller name</h5>
+                                    <h5>Dress</h5>
                                 </a>
                             </div>
                         </div>
@@ -1402,7 +1401,7 @@
                         <div class="product-style-3 product-style-chair">
                             <div class="product-title d-block mb-0">
                                 <div class="r-price">
-                                    <div class="theme-color">$21</div>
+                                    <div class="theme-color">2000 </div>
                                     <div class="main-price">
                                         <ul class="rating mb-1 mt-0">
                                             <li>
@@ -1425,7 +1424,7 @@
                                 </div>
                                 <p class="font-light mb-sm-2 mb-0">Seller name</p>
                                 <a href="product/details.html" class="font-default">
-                                    <h5>Skater Seller name</h5>
+                                    <h5>Dress</h5>
                                 </a>
                             </div>
                         </div>
@@ -1468,7 +1467,7 @@
                         <div class="product-style-3 product-style-chair">
                             <div class="product-title d-block mb-0">
                                 <div class="r-price">
-                                    <div class="theme-color">$21</div>
+                                    <div class="theme-color">2000 </div>
                                     <div class="main-price">
                                         <ul class="rating mb-1 mt-0">
                                             <li>
@@ -1491,7 +1490,7 @@
                                 </div>
                                 <p class="font-light mb-sm-2 mb-0">Seller name</p>
                                 <a href="product/details.html" class="font-default">
-                                    <h5>Skater Seller name</h5>
+                                    <h5>Dress</h5>
                                 </a>
                             </div>
                         </div>
@@ -1503,4 +1502,4 @@
     </div>
 </section>
 
-@endsection
+</x-guest-layout>
