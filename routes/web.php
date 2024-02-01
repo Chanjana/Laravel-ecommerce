@@ -63,7 +63,7 @@ Route::post('/post-test', function (Request $request) {
 
 
 Route::middleware([
-    'auth:sanctum',
+    'admin.auth',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
@@ -71,3 +71,18 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+    Route::middleware([
+        'admin.auth'
+    ])->resource(
+        'product-category',
+        \App\Http\Controllers\ProductCategoryController::class
+    );
+
+    Route::middleware([
+        'admin.auth'
+    ])->resource(
+        'user',
+        \App\Http\Controllers\UserController::class
+    );
+

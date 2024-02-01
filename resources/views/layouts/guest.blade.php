@@ -196,13 +196,14 @@
                                             <ul>
                                                 @guest
                                                     <li>
-                                                        <a href="{{ route('login') }}"
+                                                        <x-responsive-nav-link  href="{{ route('login') }}"
                                                             class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
-                                                            in</a>
+                                                            in</x-responsive-nav-link>
                                                     </li>
                                                     <li>
-                                                        <a href="{{ route('register') }}"
-                                                            class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                                                        <x-responsive-nav-link href="{{ route('register') }}"
+                                                            class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register
+                                                        </x-responsive-nav-link>
                                                     </li>
                                                 @endguest
 

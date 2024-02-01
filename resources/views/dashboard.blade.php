@@ -1,1515 +1,220 @@
-<x-guest-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight mb-0">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-   
-@section('content')
-<!-- banner section start -->
-<section class="ratio2_1 banner-style-2 pt-0">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="collection-banner p-bottom p-center text-center">
-                    <div class="banner-img">
-                        <img src="assets/images/fashion/banner/1.jpg" class="bg-img blur-up lazyload" alt="">
-                    </div>
-                    <div class="contain-banner">
-                        <div class="banner-content with-big ">
-                            <h2 class="mb-2">::STYLE::</h2>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="collection-banner p-bottom p-center text-center">
-                    <div class="banner-img">
-                        <img src="assets/images/fashion/banner/2.jpg" class="bg-img blur-up lazyload" alt="">
-                    </div>
-
-                    <div class="contain-banner">
-                        <div class="banner-content with-big ">
-                            <h2 class="mb-2">::TRIFT::</h2>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="collection-banner p-bottom p-center text-center">
-                    <div class="banner-img">
-                        <img src="assets/images/fashion/banner/3.jpg" class="bg-img blur-up lazyload" alt="">
-                    </div>
-                    <div class="contain-banner">
-                        <div class="banner-content with-big ">
-                            <h2 class="mb-2">::SUSTAIN::</h2>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- banner section end -->
-
-<!-- category section start -->
-<section class="category-section ratio_40">
-    <div class="container-fluid">
-
-        <div class="row gy-3">
-            <div class="col-xxl-2 col-lg-3">
-                <div class="category-wrap category-padding category-block theme-bg-color">
-                    <div>
-                        <h2 class="light-text">Top</h2>
-                        <h2 class="top-spacing">Our Top</h2>
-                        <span>Categories</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-10 col-lg-9">
-                <div class="category-wrapper category-slider1 white-arrow category-arrow">
-                    <div>
-                        <a href="shop-left-sidebar.html" class="category-wrap category-padding">
-                            <img src="assets/images/fashion/category/1.jpg" class="bg-img blur-up lazyload"
-                                alt="category image">
-                            <div class="category-content category-text-1">
-                                <h3 class="theme-color">Shoes</h3>
-                                <span class="text-dark">Fashion</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="shop-left-sidebar.html" class="category-wrap category-padding">
-                            <img src="assets/images/fashion/category/2.jpg" class="bg-img blur-up lazyload"
-                                alt="category image">
-                            <div class="category-content category-text-1">
-                                <h3 class="theme-color">Men</h3>
-                                <span class="text-dark">Fashion</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="shop-left-sidebar.html" class="category-wrap category-padding">
-                            <img src="assets/images/fashion/category/3.jpg" class="bg-img blur-up lazyload"
-                                alt="category image">
-                            <div class="category-content category-text-1">
-                                <h3 class="theme-color">Women</h3>
-                                <span class="text-dark">Fashion</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="shop-left-sidebar.html" class="category-wrap category-padding">
-                            <img src="assets/images/fashion/category/6.jpg" class="bg-img blur-up lazyload"
-                                alt="category image">
-                            <div class="category-content category-text-1">
-                                <h3 class="theme-color">Jewellery</h3>
-                                <span class="text-dark">Fashion</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="shop-left-sidebar.html" class="category-wrap category-padding">
-                            <img src="assets/images/fashion/category/7.jpg" class="bg-img blur-up lazyload"
-                                alt="category image">
-                            <div class="category-content category-text-1">
-                                <h3 class="theme-color">Books</h3>
-                                <span class="text-dark">Stationery</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- category section end -->
-
-<section class="ratio_asos overflow-hidden">
-    <div class="container p-sm-0">
-        <div class="row m-0">
-            <div class="col-12 p-0">
-                <div class="title-3 text-center">
-                    <h2>Latest Arrival</h2>
-                </div>
-            </div>
-        </div>
+<x-app-layout>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tailwind Admin Template</title>
+        <meta name="author" content="David Grzyb">
+        <meta name="description" content="">
+    
+        <!-- Tailwind -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
         <style>
-        .r-price {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-        }
-
-        .r-price .main-price {
-            width: 100%;
-        }
-
-        .r-price .rating {
-            padding-left: auto;
-        }
-
-        .product-style-3.product-style-chair .product-title {
-            text-align: left;
-            width: 100%;
-        }
-
-        @media (max-width:600px) {
-
-            .product-box p,
-            .product-box a {
-                text-align: left;
-            }
-
-            .product-style-3.product-style-chair .main-price {
-                text-align: right !important;
-            }
-        }
+            @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+            .font-family-karla { font-family: karla; }
+            .bg-sidebar { background: #3d68ff; }
+            .cta-btn { color: #3d68ff; }
+            .upgrade-btn { background: #1947ee; }
+            .upgrade-btn:hover { background: #0038fd; }
+            .active-nav-link { background: #1947ee; }
+            .nav-item:hover { background: #1947ee; }
+            .account-link:hover { background: #3d68ff; }
         </style>
-        <div class="row g-sm-4 g-3">
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/book1.jpg"
-                                class="w-100 bg-img blur-up lazyload" alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Stationery</span>
-                        <div class="label-block">
-                            <span class="label label-theme">10% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">$8</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
+    </head>
+    <body class="bg-gray-100 font-family-karla flex">
+    
+       
+    
+        <div class="w-full flex flex-col h-screen overflow-y-hidden">
+          
+    
+          
+        
+            <div class="w-full overflow-x-hidden border-t flex flex-col">
+                <main class="w-full flex-grow p-6">
+                    
+        
+                    <div class="flex flex-wrap mt-6">
+                        <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
+                            <p class="text-xl pb-3 flex items-center">
+                                <i class="fas fa-plus mr-3"></i> Monthly Reports
+                            </p>
+                            <div class="p-6 bg-white">
+                                <canvas id="chartOne" width="400" height="200"></canvas>
                             </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Iron Flame (The Empyrean, 2)</h5>
-                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/10.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Fashion</span>
-                        <div class="label-block">
-                            <span class="label label-theme">30% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">$30</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="w-full lg:w-1/2 pl-0 lg:pl-2 mt-12 lg:mt-0">
+                            <p class="text-xl pb-3 flex items-center">
+                                <i class="fas fa-check mr-3"></i> Resolved Reports
+                            </p>
+                            <div class="p-6 bg-white">
+                                <canvas id="chartTwo" width="400" height="200"></canvas>
                             </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Wrangler Authentics Men's Long Sleeve Quilted Lined Flannel Shirt Jacket with Hood
-                                </h5>
-                            </a>
                         </div>
                     </div>
-                </div>
+        
+                    <div class="w-full mt-12">
+                        <p class="text-xl pb-3 flex items-center">
+                            <i class="fas fa-list mr-3"></i> Latest Reports
+                        </p>
+                        <div class="bg-white overflow-auto">
+                            <table class="min-w-full bg-white">
+                                <thead class="bg-gray-800 text-white">
+                                    <tr>
+                                        <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Name</th>
+                                        <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Last name</th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Phone</th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-700">
+                                    <tr>
+                                        <td class="w-1/3 text-left py-3 px-4">Lian</td>
+                                        <td class="w-1/3 text-left py-3 px-4">Smith</td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    </tr>
+                                    <tr class="bg-gray-200">
+                                        <td class="w-1/3 text-left py-3 px-4">Emma</td>
+                                        <td class="w-1/3 text-left py-3 px-4">Johnson</td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w-1/3 text-left py-3 px-4">Oliver</td>
+                                        <td class="w-1/3 text-left py-3 px-4">Williams</td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    </tr>
+                                    <tr class="bg-gray-200">
+                                        <td class="w-1/3 text-left py-3 px-4">Isabella</td>
+                                        <td class="w-1/3 text-left py-3 px-4">Brown</td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w-1/3 text-left py-3 px-4">Lian</td>
+                                        <td class="w-1/3 text-left py-3 px-4">Smith</td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    </tr>
+                                    <tr class="bg-gray-200">
+                                        <td class="w-1/3 text-left py-3 px-4">Emma</td>
+                                        <td class="w-1/3 text-left py-3 px-4">Johnson</td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w-1/3 text-left py-3 px-4">Oliver</td>
+                                        <td class="w-1/3 text-left py-3 px-4">Williams</td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    </tr>
+                                    <tr class="bg-gray-200">
+                                        <td class="w-1/3 text-left py-3 px-4">Isabella</td>
+                                        <td class="w-1/3 text-left py-3 px-4">Brown</td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+        
+                <footer class="w-full bg-white text-right p-4">
+                    Built by <a target="_blank" href="https://davidgrzyb.com" class="underline">David Grzyb</a>.
+                </footer>
             </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/img2.jpg"
-                                class="w-100 bg-img blur-up lazyload" alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Fashion</span>
-
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">$28</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Nike mens Dry Park III Shorts</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/3.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
-                        <div class="label-block">
-                            <span class="label label-theme">30% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">$4</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Fuga Officia Quaerat Fugiat</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/2.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
-                        <div class="label-block">
-                            <span class="label label-theme">30% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">2000 1</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Doloremque Quibusdam Maxime Natus</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/12.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
-                        <div class="label-block">
-                            <span class="label label-theme">30% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">2000 9</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Nihil Beatae Sit Sed</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/3.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
-                        <div class="label-block">
-                            <span class="label label-theme">30% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">$4</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Non Sed Tempora Accusamus</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/8.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
-                        <div class="label-block">
-                            <span class="label label-theme">30% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">2000 8</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Odit Corporis Ut Pariatur</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/23.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
-                        <div class="label-block">
-                            <span class="label label-theme">50% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">$25</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Reebok Women's Jacket - Polar Fleece Sweatshirt Jacket - Lightweight Coat for Women
-                                </h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/11.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
-                        <div class="label-block">
-                            <span class="label label-theme">30% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">$7</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Quidem Architecto Deleniti Hic</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/20.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
-                        <div class="label-block">
-                            <span class="label label-theme">30% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">$5</div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Error Itaque Debitis Commodi</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <a href="product/details.html">
-                            <img src="assets/images/fashion/product/front/20.jpg" class="w-100 bg-img blur-up lazyload"
-                                alt="">
-                        </a>
-                        <div class="circle-shape"></div>
-                        <span class="background-text">Furniture</span>
-                        <div class="label-block">
-                            <span class="label label-theme">30% Off</span>
-                        </div>
-                        <div class="cart-wrap">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)" class="addtocart-btn">
-                                        <i data-feather="shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i data-feather="eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i data-feather="heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-style-3 product-style-chair">
-                        <div class="product-title d-block mb-0">
-                            <div class="r-price">
-                                <div class="theme-color">2000 </div>
-                                <div class="main-price">
-                                    <ul class="rating mb-1 mt-0">
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star theme-color"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                            <a href="product/details.html" class="font-default">
-                                <h5>Excepturi Et In Cum</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
-    </div>
-</section>
+    
+        <!-- AlpineJS -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <!-- Font Awesome -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+        <!-- ChartJS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    
+        <script>
+            var chartOne = document.getElementById('chartOne');
+            var myChart = new Chart(chartOne, {
+                type: 'bar',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+    
+            var chartTwo = document.getElementById('chartTwo');
+            var myLineChart = new Chart(chartTwo, {
+                type: 'line',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+    </body>
 
-
-
-
-
-<style>
-.products-c .bg-size {
-    background-position: center 0 !important;
-}
-</style>
-
-<section class="ratio_asos overflow-hidden pb-5">
-    <div class="px-0 container-fluid p-sm-0">
-        <div class="row m-0">
-            <div class="col-12 p-0">
-                <div class="title-3 text-center">
-                    <h2>Top Deals</h2>
-                    <h5 class="theme-color">Our Collection</h5>
-                </div>
-            </div>
-
-            <div class="our-product products-c">
-                <div>
-                    <div class="product-box">
-                        <div class="img-wrapper">
-                            <a href="product/details.html">
-                                <img src="assets/images/fashion/product/front/25.jpg"
-                                    class="w-100 bg-img blur-up lazyload" alt="">
-                            </a>
-                            <div class="circle-shape"></div>
-                            <span class="background-text">Fashion</span>
-                            <div class="label-block">
-                                <span class="label label-theme">30% Off</span>
-                            </div>
-                            <div class="cart-wrap">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="addtocart-btn" data-bs-toggle="modal"
-                                            data-bs-target="#addtocart">
-                                            <i data-feather="shopping-cart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#quick-view">
-                                            <i data-feather="eye"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.php" class="wishlist">
-                                            <i data-feather="heart"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-style-3 product-style-chair">
-                            <div class="product-title d-block mb-0">
-                                <div class="r-price">
-                                    <div class="theme-color">2000 </div>
-                                    <div class="main-price">
-                                        <ul class="rating mb-1 mt-0">
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                                <a href="product/details.html" class="font-default">
-                                    <h5>Dress</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="product-box">
-                        <div class="img-wrapper">
-                            <a href="product/details.html">
-                                <img src="assets/images/fashion/product/front/26.jpg"
-                                    class="w-100 bg-img blur-up lazyload" alt="">
-                            </a>
-                            <div class="circle-shape"></div>
-                            <span class="background-text">Fashion</span>
-                            <div class="label-block">
-                                <span class="label label-theme">30% Off</span>
-                            </div>
-                            <div class="cart-wrap">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="addtocart-btn" data-bs-toggle="modal"
-                                            data-bs-target="#addtocart">
-                                            <i data-feather="shopping-cart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#quick-view">
-                                            <i data-feather="eye"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.php" class="wishlist">
-                                            <i data-feather="heart"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-style-3 product-style-chair">
-                            <div class="product-title d-block mb-0">
-                                <div class="r-price">
-                                    <div class="theme-color">2000 </div>
-                                    <div class="main-price">
-                                        <ul class="rating mb-1 mt-0">
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                                <a href="product/details.html" class="font-default">
-                                    <h5>Dress</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="product-box">
-                        <div class="img-wrapper">
-                            <a href="product/details.html">
-                                <img src="assets/images/fashion/product/front/27.jpg"
-                                    class="w-100 bg-img blur-up lazyload" alt="">
-                            </a>
-                            <div class="circle-shape"></div>
-                            <span class="background-text">Fashion</span>
-                            <div class="label-block">
-                                <span class="label label-theme">30% Off</span>
-                            </div>
-                            <div class="cart-wrap">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="addtocart-btn" data-bs-toggle="modal"
-                                            data-bs-target="#addtocart">
-                                            <i data-feather="shopping-cart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#quick-view">
-                                            <i data-feather="eye"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.php" class="wishlist">
-                                            <i data-feather="heart"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-style-3 product-style-chair">
-                            <div class="product-title d-block mb-0">
-                                <div class="r-price">
-                                    <div class="theme-color">2000 </div>
-                                    <div class="main-price">
-                                        <ul class="rating mb-1 mt-0">
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                                <a href="product/details.html" class="font-default">
-                                    <h5>Dress</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="product-box">
-                        <div class="img-wrapper">
-                            <a href="product/details.html">
-                                <img src="assets/images/fashion/product/front/28.jpg"
-                                    class="w-100 bg-img blur-up lazyload" alt="">
-                            </a>
-                            <div class="circle-shape"></div>
-                            <span class="background-text">Fashion</span>
-                            <div class="label-block">
-                                <span class="label label-theme">30% Off</span>
-                            </div>
-                            <div class="cart-wrap">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="addtocart-btn" data-bs-toggle="modal"
-                                            data-bs-target="#addtocart">
-                                            <i data-feather="shopping-cart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#quick-view">
-                                            <i data-feather="eye"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.php" class="wishlist">
-                                            <i data-feather="heart"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-style-3 product-style-chair">
-                            <div class="product-title d-block mb-0">
-                                <div class="r-price">
-                                    <div class="theme-color">2000 </div>
-                                    <div class="main-price">
-                                        <ul class="rating mb-1 mt-0">
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                                <a href="product/details.html" class="font-default">
-                                    <h5>Dress</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="product-box">
-                        <div class="img-wrapper">
-                            <a href="product/details.html">
-                                <img src="assets/images/fashion/product/front/29.jpg"
-                                    class="w-100 bg-img blur-up lazyload" alt="">
-                            </a>
-                            <div class="circle-shape"></div>
-                            <span class="background-text">Fashion</span>
-                            <div class="label-block">
-                                <span class="label label-theme">30% Off</span>
-                            </div>
-                            <div class="cart-wrap">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="addtocart-btn" data-bs-toggle="modal"
-                                            data-bs-target="#addtocart">
-                                            <i data-feather="shopping-cart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#quick-view">
-                                            <i data-feather="eye"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.php" class="wishlist">
-                                            <i data-feather="heart"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-style-3 product-style-chair">
-                            <div class="product-title d-block mb-0">
-                                <div class="r-price">
-                                    <div class="theme-color">2000 </div>
-                                    <div class="main-price">
-                                        <ul class="rating mb-1 mt-0">
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                                <a href="product/details.html" class="font-default">
-                                    <h5>Dress</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="product-box">
-                        <div class="img-wrapper">
-                            <a href="product/details.html">
-                                <img src="assets/images/fashion/product/front/30.jpg"
-                                    class="w-100 bg-img blur-up lazyload" alt="">
-                            </a>
-                            <div class="circle-shape"></div>
-                            <span class="background-text">Fashion</span>
-                            <div class="label-block">
-                                <span class="label label-theme">30% Off</span>
-                            </div>
-                            <div class="cart-wrap">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="addtocart-btn" data-bs-toggle="modal"
-                                            data-bs-target="#addtocart">
-                                            <i data-feather="shopping-cart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#quick-view">
-                                            <i data-feather="eye"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.php" class="wishlist">
-                                            <i data-feather="heart"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-style-3 product-style-chair">
-                            <div class="product-title d-block mb-0">
-                                <div class="r-price">
-                                    <div class="theme-color">2000 </div>
-                                    <div class="main-price">
-                                        <ul class="rating mb-1 mt-0">
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                                <a href="product/details.html" class="font-default">
-                                    <h5>Dress</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="product-box">
-                        <div class="img-wrapper">
-                            <a href="product/details.html">
-                                <img src="assets/images/fashion/product/front/31.jpg"
-                                    class="w-100 bg-img blur-up lazyload" alt="">
-                            </a>
-                            <div class="circle-shape"></div>
-                            <span class="background-text">Fashion</span>
-                            <div class="label-block">
-                                <span class="label label-theme">30% Off</span>
-                            </div>
-                            <div class="cart-wrap">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="addtocart-btn" data-bs-toggle="modal"
-                                            data-bs-target="#addtocart">
-                                            <i data-feather="shopping-cart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#quick-view">
-                                            <i data-feather="eye"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.php" class="wishlist">
-                                            <i data-feather="heart"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-style-3 product-style-chair">
-                            <div class="product-title d-block mb-0">
-                                <div class="r-price">
-                                    <div class="theme-color">2000 </div>
-                                    <div class="main-price">
-                                        <ul class="rating mb-1 mt-0">
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                                <a href="product/details.html" class="font-default">
-                                    <h5>Dress</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="product-box">
-                        <div class="img-wrapper">
-                            <a href="product/details.html">
-                                <img src="assets/images/fashion/product/front/32.jpg"
-                                    class="w-100 bg-img blur-up lazyload" alt="">
-                            </a>
-                            <div class="circle-shape"></div>
-                            <span class="background-text">Fashion</span>
-                            <div class="label-block">
-                                <span class="label label-theme">30% Off</span>
-                            </div>
-                            <div class="cart-wrap">
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0)" class="addtocart-btn" data-bs-toggle="modal"
-                                            data-bs-target="#addtocart">
-                                            <i data-feather="shopping-cart"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#quick-view">
-                                            <i data-feather="eye"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.php" class="wishlist">
-                                            <i data-feather="heart"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-style-3 product-style-chair">
-                            <div class="product-title d-block mb-0">
-                                <div class="r-price">
-                                    <div class="theme-color">2000 </div>
-                                    <div class="main-price">
-                                        <ul class="rating mb-1 mt-0">
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star theme-color"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p class="font-light mb-sm-2 mb-0">Seller name</p>
-                                <a href="product/details.html" class="font-default">
-                                    <h5>Dress</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-@endsection
-
-</x-guest-layout>
+    
+    
+</x-app-layout>
