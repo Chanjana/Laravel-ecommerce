@@ -23,10 +23,13 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        //Create a gate - seeAdministration
 
         Gate::define('seeAdministration', function(User $user){
             return $user->role->value === 1;
         });
+
+
+        //Create a gate - accessSuperAdmin
     }
 }

@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <title>TRIF</title>
+    <title>@yield('title') | TRIF</title>
 
     <link id="rtl-link" rel="stylesheet" type="text/css" href="{{ asset ('assets/css/vendors/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset ('assets/css/vendors/ion.rangeSlider.min.css') }}">
@@ -182,9 +182,9 @@
                                                     <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
                                                     </li>
                                                 {{-- @endguest --}}
-                                                
+
                                                 @auth
-                                                    
+
                                                 <li>
                                                     <!-- Authentication -->
                                                     <form method="POST" action="{{ route('logout') }}" x-data>
@@ -272,12 +272,12 @@
                             <div class="brand-logo">
                                 <a href="index.htm" class="footer-logo float-start">
                                     <img src="assets/images/logo.png" class="f-logo img-fluid blur-up lazyload"
-                                        alt="logo">
+                                        alt="logo" >
                                 </a>
                             </div>
                             <ul class="contact-lists" style="clear:both;">
                                 <li>
-                                    <span><b>phone:</b> <span class="font-light"> +1 0000000000</span></span>
+                                    <span><b>phone:</b> <span class="font-light"> +1 20000000000</span></span>
                                 </li>
                                 <li>
                                     <span><b>Address:</b><span class="font-light"> NIT, Faridabad, Haryana,
@@ -417,7 +417,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <p class="mb-0 font-dark">© 2023, Surfside Media.</p>
+                        <p class="mb-0 font-dark">© {{date('Y')}}, Surfside Media.</p>
                     </div>
                 </div>
             </div>

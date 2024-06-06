@@ -1,220 +1,280 @@
-<x-app-layout>
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tailwind Admin Template</title>
-        <meta name="author" content="David Grzyb">
-        <meta name="description" content="">
-    
-        <!-- Tailwind -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-        <style>
-            @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-            .font-family-karla { font-family: karla; }
-            .bg-sidebar { background: #3d68ff; }
-            .cta-btn { color: #3d68ff; }
-            .upgrade-btn { background: #1947ee; }
-            .upgrade-btn:hover { background: #0038fd; }
-            .active-nav-link { background: #1947ee; }
-            .nav-item:hover { background: #1947ee; }
-            .account-link:hover { background: #3d68ff; }
-        </style>
-    </head>
-    <body class="bg-gray-100 font-family-karla flex">
-    
-       
-    
-        <div class="w-full flex flex-col h-screen overflow-y-hidden">
-          
-    
-          
-        
-            <div class="w-full overflow-x-hidden border-t flex flex-col">
-                <main class="w-full flex-grow p-6">
-                    
-        
-                    <div class="flex flex-wrap mt-6">
-                        <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
-                            <p class="text-xl pb-3 flex items-center">
-                                <i class="fas fa-plus mr-3"></i> Monthly Reports
-                            </p>
-                            <div class="p-6 bg-white">
-                                <canvas id="chartOne" width="400" height="200"></canvas>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-1/2 pl-0 lg:pl-2 mt-12 lg:mt-0">
-                            <p class="text-xl pb-3 flex items-center">
-                                <i class="fas fa-check mr-3"></i> Resolved Reports
-                            </p>
-                            <div class="p-6 bg-white">
-                                <canvas id="chartTwo" width="400" height="200"></canvas>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="w-full mt-12">
-                        <p class="text-xl pb-3 flex items-center">
-                            <i class="fas fa-list mr-3"></i> Latest Reports
-                        </p>
-                        <div class="bg-white overflow-auto">
-                            <table class="min-w-full bg-white">
-                                <thead class="bg-gray-800 text-white">
-                                    <tr>
-                                        <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Name</th>
-                                        <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Last name</th>
-                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Phone</th>
-                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Email</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-gray-700">
-                                    <tr>
-                                        <td class="w-1/3 text-left py-3 px-4">Lian</td>
-                                        <td class="w-1/3 text-left py-3 px-4">Smith</td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                    </tr>
-                                    <tr class="bg-gray-200">
-                                        <td class="w-1/3 text-left py-3 px-4">Emma</td>
-                                        <td class="w-1/3 text-left py-3 px-4">Johnson</td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-1/3 text-left py-3 px-4">Oliver</td>
-                                        <td class="w-1/3 text-left py-3 px-4">Williams</td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                    </tr>
-                                    <tr class="bg-gray-200">
-                                        <td class="w-1/3 text-left py-3 px-4">Isabella</td>
-                                        <td class="w-1/3 text-left py-3 px-4">Brown</td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-1/3 text-left py-3 px-4">Lian</td>
-                                        <td class="w-1/3 text-left py-3 px-4">Smith</td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                    </tr>
-                                    <tr class="bg-gray-200">
-                                        <td class="w-1/3 text-left py-3 px-4">Emma</td>
-                                        <td class="w-1/3 text-left py-3 px-4">Johnson</td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-1/3 text-left py-3 px-4">Oliver</td>
-                                        <td class="w-1/3 text-left py-3 px-4">Williams</td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                    </tr>
-                                    <tr class="bg-gray-200">
-                                        <td class="w-1/3 text-left py-3 px-4">Isabella</td>
-                                        <td class="w-1/3 text-left py-3 px-4">Brown</td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
-                                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </main>
-        
-                <footer class="w-full bg-white text-right p-4">
-                    Built by <a target="_blank" href="https://davidgrzyb.com" class="underline">David Grzyb</a>.
-                </footer>
-            </div>
-            
-        </div>
-    
-        <!-- AlpineJS -->
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-        <!-- Font Awesome -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-        <!-- ChartJS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-    
-        <script>
-            var chartOne = document.getElementById('chartOne');
-            var myChart = new Chart(chartOne, {
-                type: 'bar',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
-                }
-            });
-    
-            var chartTwo = document.getElementById('chartTwo');
-            var myLineChart = new Chart(chartTwo, {
-                type: 'line',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
-                }
-            });
-        </script>
-    </body>
+<x-guest-layout>
 
-    
-    
-</x-app-layout>
+    <!-- Breadcrumb section start -->
+    <section class="breadcrumb-section section-b-space">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>User Dashboard</h3>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.php">
+                                    <i class="fas fa-home"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb section end -->
+
+    <!-- user dashboard section start -->
+    <section class="section-b-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav nav-tabs custome-nav-tabs flex-column category-option" id="myTab">
+                        <li class="nav-item mb-2">
+                            <button class="nav-link font-light active" id="tab" data-bs-toggle="tab" data-bs-target="#dash" type="button"><i class="fas fa-angle-right"></i>Dashboard</button>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <button class="nav-link font-light" id="1-tab" data-bs-toggle="tab" data-bs-target="#order" type="button"><i class="fas fa-angle-right"></i>Orders</button>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <button class="nav-link font-light" id="5-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"><i class="fas fa-angle-right"></i>Profile</button>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="filter-button dash-filter dashboard">
+                        <button class="btn btn-solid-default btn-sm fw-bold filter-btn">Show Menu</button>
+                    </div>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="dash">
+                            <div class="dashboard-right">
+                                <div class="dashboard">
+                                    <div class="page-title title title1 title-effect">
+                                        <h2>My Dashboard</h2>
+                                    </div>
+                                    <div class="welcome-msg">
+                                        <h6 class="font-light">Hello, <span class="text-uppercase">{{ auth()->user()->name }} !</span></h6>
+                                        <p class="font-light">From your My Account Dashboard you have the ability to
+                                            view a snapshot of your recent account activity and update your account
+                                            information. Select a link below to view or edit information.</p>
+                                    </div>
+
+                                    <div class="order-box-contain my-4">
+                                        <div class="row g-4">
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="order-box">
+                                                    <div class="order-box-image">
+                                                        <img src="assets/images/svg/box.png" class="img-fluid blur-up lazyload" alt="">
+                                                    </div>
+                                                    <div class="order-box-contain">
+                                                        <img src="assets/images/svg/box1.png" class="img-fluid blur-up lazyload" alt="">
+                                                        <div>
+                                                            <h5 class="font-light">total orders</h5>
+                                                            <h3>{{ $total_orders ?? "--" }}</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="order">
+                            <div class="box-head mb-3">
+                                <h3>My Orders</h3>
+                            </div>
+
+
+                            @forelse($orders->groupBy("seller_id") as $groups)
+
+                                @forelse($groups as $order)
+
+                                    <div id="accordion">
+
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Order No: #{{$order->id}}
+                                                <a class="btn" data-bs-toggle="collapse" href="#collapse{{$loop->iteration + 5}}">
+                                                    Click to expand order details
+                                                </a>
+                                            </div>
+                                            <div id="collapse{{$loop->iteration + 5}}" class="collapse" data-bs-parent="#accordion">
+                                                <div class="card-body">
+
+                                                    <p class="mb-3">
+                                                        Tracking number: <span class="fw-bold">{{ $order->order_id }}</span>
+                                                        <br>
+                                                        Shipping address: {{ $order->shipping_details["name"] }} - {{ $order->shipping_details["phone"] }}, {{$order->shipping_details["street_line_1"]}}, {{ $order->shipping_details["street_line_2"] !== null ? $order->shipping_details["street_line_2"] . ' ,' : " " }} {{$order->shipping_details["city"]}}, {{ $order->shipping_details["state"] }} - {{ $order->shipping_details["zip"] }}
+                                                        <br>
+                                                        Placed on: {{ \Carbon\Carbon::parse($order->created_at)->toDateTimeString() }}
+                                                    </p>
+
+                                                    <p class="py-3">
+                                                        Sold by: {{ $order->item->seller->name }} - {{ $order->item->seller->email }}
+                                                    </p>
+
+                                                    <div class="my-5">
+                                                        <ol class="progtrckr">
+                                                            <li class="@if($order->status == "processing" || $order->status == "shipped" || $order->status == "delivered" || $order->status == "cancelled") progtrckr-done @else progtrckr-todo @endif">
+                                                                <h5>Order Processing</h5>
+                                                                <h6>{{ \Carbon\Carbon::parse($order->created_at)->toDateTimeString() }}</h6>
+                                                            </li>
+                                                            @if($order->status == "cancelled")
+                                                                <li class="progtrckr-cancelled">
+                                                                    <h5>Cancelled</h5>
+                                                                </li>
+                                                            @endif
+                                                            <li class="@if($order->status == "shipped" || $order->status == "delivered") progtrckr-done @else progtrckr-todo @endif">
+                                                                <h5>Shipped</h5>
+                                                            </li>
+                                                            <li class="@if($order->status == "delivered") progtrckr-done @else progtrckr-todo @endif">
+                                                                <h5>Delivered</h5>
+                                                            </li>
+
+                                                        </ol>
+                                                    </div>
+
+                                                    <div class="table-responsive">
+                                                        <table class="table cart-table">
+                                                            <thead>
+                                                            <tr class="table-head">
+                                                                <th scope="col">image</th>
+                                                                <th scope="col">Product Details</th>
+                                                                <th scope="col">Status</th>
+                                                                <th scope="col">Price</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                                <tr>
+                                                                    <td>
+                                                                        <img src="{{ Storage::disk("public")->url($order->item->images[0]) }}" class="blur-up lazyload" alt="" style="height: 150px;">
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <p class="fs-6 m-0">{{$order->item->title}}</p>
+                                                                    </td>
+                                                                    <td>
+                                                                        @if($order->status == "processing")
+                                                                            <p class="success-button bg-warning btn btn-sm" >Processing</p>
+                                                                        @elseif($order->status == "shipped")
+                                                                            <p class="success-button btn btn-sm">Shipped</p>
+                                                                        @elseif($order->status == "delivered")
+                                                                            <p class="success-button btn btn-sm">Complete</p>
+                                                                        @elseif($order->status == "cancelled")
+                                                                            <p class="btn btn-sm btn-danger text-white">Cancelled</p>
+                                                                        @endif
+                                                                    </td>
+                                                                    <td>
+                                                                        <p class="theme-color fs-6">LKR {{$order->item->price}}</p>
+                                                                    </td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <p class="mt-3">
+                                                        Shipping Fee: {{ array_key_exists("shipping_fee",$order->shipping_details) ? "LKR " . number_format($order->shipping_details["shipping_fee"],2) : "" }}
+                                                        <br>
+                                                        Order subtotal: {{ number_format($order->item->price, 2)  }}
+                                                        <br>
+                                                        Order total: <b>LKR {{ number_format($order->item->price + $order->shipping_details["shipping_fee"], 2) }}</b> <br>
+                                                        Payment method: {{ $order->payment_method == "cod" ? "Cash on Delivery" : "Card payment" }}
+                                                        <br>
+                                                        @if($order->payment_method == "card")
+                                                            Paid using: {{ Str::mask($order->card_details["card_number"], "X", 0, -4) }}
+                                                        @endif
+                                                    </p>
+
+                                                    @if($order->status == "shipped")
+                                                        <div class="my-4">
+                                                            @livewire("mark-item-delivered", ["order_id" => $order->id])
+                                                        </div>
+                                                    @endif
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                @empty
+
+                                    <h6> No Orders to show</h6>
+                                @endforelse
+
+
+                             @empty
+
+                            @endforelse
+
+
+
+                        </div>
+
+                        <div class="tab-pane fade dashboard-profile dashboard" id="profile">
+
+                            @if (Laravel\Fortify\Features::canUpdateProfileInformation())
+                                @livewire('profile.update-profile-information-form')
+
+                                <x-section-border />
+                            @endif
+
+                            @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
+                                <div class="mt-10 sm:mt-0">
+                                    @livewire('profile.update-password-form')
+                                </div>
+
+                                <x-section-border />
+                            @endif
+
+                                @if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
+                                    <div class="mt-10 sm:mt-0">
+                                        @livewire('profile.two-factor-authentication-form')
+                                    </div>
+
+                                    <x-section-border />
+                                @endif
+
+                                <div class="mt-10 sm:mt-0">
+                                    @livewire('profile.logout-other-browser-sessions-form')
+                                </div>
+
+                                @if (Laravel\Jetstream\Jetstream::hasAccountDeletionFeatures())
+                                    <x-section-border />
+
+                                    <div class="mt-10 sm:mt-0">
+                                        @livewire('profile.delete-user-form')
+                                    </div>
+                                @endif
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- user dashboard section end -->
+
+</x-guest-layout>

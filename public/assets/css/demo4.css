@@ -6668,7 +6668,7 @@ header .main-navbar .nav-menu>li.mega-menu.home-menu .megamenu-image-title {
 }
 
 /* =====================
-    Slick SLider CSS Start 
+    Slick SLider CSS Start
  ========================== */
 .box-arrow .slick-prev {
   left: calc(5px + (25 - 5) * ((100vw - 320px) / (1920 - 320)));
@@ -14355,6 +14355,12 @@ hr {
   width: 100% !important;
 }
 
+.progtrckr li.progtrckr-cancelled {
+    color: #212529;
+    border-top: 4px solid red;
+    width: 100% !important;
+}
+
 @media (max-width: 575px) {
   .progtrckr li.progtrckr-done {
     position: relative;
@@ -14368,16 +14374,39 @@ hr {
     border-left: 4px solid var(--theme-color);
   }
 
-  [dir="rtl"] .progtrckr li.progtrckr-done {
+  [dir="rtl"] .progtrckr li.progtrckr-cancelled {
     margin-left: 0;
     margin-right: 30px;
     text-align: right;
     border-left: none;
-    border-right: 4px solid var(--theme-color);
+    border-right: 4px solid red;
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
+
+    .progtrckr li.progtrckr-cancelled {
+        position: relative;
+        text-align: left;
+        margin-left: 30px;
+        -webkit-box-align: self-start;
+        -ms-flex-align: self-start;
+        align-items: self-start;
+        padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+        border-top: unset;
+        border-left: 4px solid red;
+    }
+
+    [dir="rtl"] .progtrckr li.progtrckr-cancelled {
+        margin-left: 0;
+        margin-right: 30px;
+        text-align: right;
+        border-left: none;
+        border-right: 4px solid red;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
 }
 
 .progtrckr li.progtrckr-done:before {
@@ -14402,10 +14431,38 @@ hr {
   justify-content: center;
 }
 
+.progtrckr li.progtrckr-cancelled:before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #fff;
+    background-color: red !important;
+    height: 30px;
+    width: 30px;
+    line-height: 2.2em;
+    border: none;
+    border-radius: 2.2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
 .progtrckr li.progtrckr-done h6 {
   font-size: 13px;
   margin-top: 8px;
   color: #7e7e7e;
+}
+
+.progtrckr li.progtrckr-cancelled h6 {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #7e7e7e;
 }
 
 .order-left-image {

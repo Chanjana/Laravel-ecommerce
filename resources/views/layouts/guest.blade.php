@@ -67,7 +67,7 @@
 
 <body class="theme-color light ltr">
 
-    @livewireScripts
+
 
     <style>
         header .profile-dropdown ul li {
@@ -128,7 +128,7 @@
                         <div class="main-menu">
                             <div class="menu-left">
                                 <div class="brand-logo">
-                                    <a href=" ">
+                                    <a href="/">
                                         <img src="{{ asset('assets/images/logo.png') }}"
                                             class="h-logo img-fluid blur-up lazyload" alt="logo">
                                     </a>
@@ -149,14 +149,15 @@
                                                     </span>
                                                 </div>
                                             </li>
-                                            <li><a href="index.htm" class="nav-link menu-title">Home</a></li>
-                                            <li><a href="shop.html" class="nav-link menu-title">Shop</a></li>
-                                            <li><a href="cart/list.html" class="nav-link menu-title">Cart</a></li>
-                                            <li><a href="about-us.html" class="nav-link menu-title">About Us</a></li>
-                                            <li><a href="contact-us.html" class="nav-link menu-title">Contact Us</a>
+                                            <li><a href="/" class="nav-link menu-title">Home</a></li>
+                                            <li><a href="{{  route('shop') }}" class="nav-link menu-title">Shop</a></li>
+                                            <li><a href="{{ route('aboutus') }}" class="nav-link menu-title">About Us</a></li>
                                             </li>
-                                            <li><a href="sell-register.html" class="nav-link menu-title">Sell On
-                                                    TRIF</a></li>
+                                            @guest
+                                                <li><a href="{{route('seller-onboarding')}}" class="nav-link menu-title">Sell On
+                                                        TRIF</a></li>
+                                            @endguest
+
                                         </ul>
                                     </div>
                                 </div>
@@ -170,20 +171,10 @@
                                     </li>
                                     <li class="onhover-dropdown wislist-dropdown">
                                         <div class="cart-media">
-                                            <a href="wishlist/list.html">
-                                                <i data-feather="heart"></i>
-                                                <span id="wishlist-count" class="label label-theme rounded-pill">
-                                                    0
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="onhover-dropdown wislist-dropdown">
-                                        <div class="cart-media">
-                                            <a href="cart/list.html">
+                                            <a href="{{route('view-cart')}}">
                                                 <i data-feather="shopping-cart"></i>
                                                 <span id="cart-count" class="label label-theme rounded-pill">
-                                                    0
+                                                    {{ \Gloudemans\Shoppingcart\Facades\Cart::content()->count() }}
                                                 </span>
                                             </a>
                                         </div>
@@ -208,6 +199,18 @@
                                                 @endguest
 
                                                 @auth
+                                                    @if(auth()->user()->role->value == 1 || auth()->user()->role->value == 5)
+                                                            <li>
+                                                                <x-responsive-nav-link href="{{ route('filament.admin.pages.dashboard') }}">Dashboard
+                                                                </x-responsive-nav-link>
+                                                            </li>
+                                                        @else
+                                                            <li>
+                                                                <x-responsive-nav-link href="{{ route('dashboard') }}">Dashboard
+                                                                </x-responsive-nav-link>
+                                                            </li>
+                                                    @endif
+
 
                                                     <li>
                                                         <!-- Authentication -->
@@ -217,10 +220,6 @@
                                                             <x-responsive-nav-link href="{{ route('logout') }}"
                                                                 @click.prevent="$root.submit();">
                                                                 {{ __('Log Out') }}
-                                                            </x-responsive-nav-link>
-                                                            <x-responsive-nav-link href="{{ route('profile.show') }}"
-                                                                :active="request()->routeIs('profile.show')">
-                                                                {{ __('Profile') }}
                                                             </x-responsive-nav-link>
                                                         </form>
                                                     </li>
@@ -298,9 +297,9 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-contact">
                             <div class="brand-logo">
-                                <a href="index.htm" class="footer-logo float-start">
-                                    <img src="assets/images/logo.png" class="f-logo img-fluid blur-up lazyload"
-                                        alt="logo">
+                                <a href="/" class="footer-logo float-start">
+                                    <img src="{{asset('assets/images/logo.png')}}" class="f-logo img-fluid blur-up lazyload"
+                                        alt="logo" style="height: 70px;">
                                 </a>
                             </div>
                             <ul class="contact-lists" style="clear:both;">
@@ -324,7 +323,7 @@
                             <div class="footer-content">
                                 <ul>
                                     <li>
-                                        <a href="index.htm" class="font-dark">Home</a>
+                                        <a href="/" class="font-dark">Home</a>
                                     </li>
                                     <li>
                                         <a href="shop.html" class="font-dark">Shop</a>
@@ -420,32 +419,32 @@
                             <li class="font-dark">We accept:</li>
                             <li>
                                 <a href="javascript:void(0)">
-                                    <img src="assets/images/payment-icon/1.jpg" class="img-fluid blur-up lazyload"
+                                    <img src="{{asset('assets/images/payment-icon/1.jpg')}}" class="img-fluid blur-up lazyload"
                                         alt="payment icon">
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)">
-                                    <img src="assets/images/payment-icon/2.jpg" class="img-fluid blur-up lazyload"
+                                    <img src="{{asset('assets/images/payment-icon/2.jpg')}}" class="img-fluid blur-up lazyload"
                                         alt="payment icon">
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)">
-                                    <img src="assets/images/payment-icon/3.jpg" class="img-fluid blur-up lazyload"
+                                    <img src="{{asset('assets/images/payment-icon/3.jpg')}}" class="img-fluid blur-up lazyload"
                                         alt="payment icon">
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)">
-                                    <img src="assets/images/payment-icon/4.jpg" class="img-fluid blur-up lazyload"
+                                    <img src="{{asset('assets/images/payment-icon/4.jpg')}}" class="img-fluid blur-up lazyload"
                                         alt="payment icon">
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <p class="mb-0 font-dark">© 2023, TRIF</p>
+                        <p class="mb-0 font-dark">© {{ date('Y') }}, TRIF</p>
                     </div>
                 </div>
             </div>
@@ -507,6 +506,8 @@
         });
     </script>
     @stack('scripts')
+
+    @livewireScripts
 
 </body>
 

@@ -12,9 +12,15 @@ class ProductCategory extends Model
         'name',
         'slug',
         'description',
+        'category_image',
         'parent_id',
         'meta_title',
         'meta_description',
         'meta_keywords',
     ];
+
+    public function items()
+    {
+        return $this->hasMany(Item::class, "id", "category_id");
+    }
 }
