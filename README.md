@@ -37,7 +37,24 @@ TRIF caters to individuals seeking budget-friendly and sustainable purchasing op
 
 ## Technology Stack
 
-TRIF is built using the Laravel framework, a powerful PHP framework known for its expressive syntax and robust features. The application follows the Model-View-Controller (MVC) architecture and utilizes Laravel's Eloquent ORM for database operations. Additional components include Jetstream for authentication scaffolding and Livewire for dynamic interactions.
+TRIF is built using the Laravel framework, a powerful PHP framework known for its expressive syntax and robust features. Laravel follows the Model-View-Controller (MVC) architecture, which separates the application's logic into three distinct layers:
+
+- **Model**: Represents the data and database interactions of the application. Laravel's Eloquent ORM simplifies database operations by providing an intuitive ActiveRecord implementation.
+- **View**: Handles the presentation layer of the application, responsible for rendering HTML templates. Laravel's Blade templating engine offers a clean and efficient syntax for designing views.
+- **Controller**: Acts as an intermediary between the Model and View layers, processing incoming requests and generating appropriate responses. Controllers contain the application's business logic and orchestrate interactions between models and views.
+
+### Data Migrations
+
+Laravel's migration feature allows developers to manage database schemas and version control database changes. With migrations, database schema changes can be easily tracked and applied across different environments.
+
+### Controllers and Seeders
+
+Controllers in Laravel handle incoming HTTP requests and execute the corresponding actions. They serve as the entry points for processing user input and interacting with models and views. Seeders, on the other hand, are used to populate the database with dummy data for testing and development purposes.
+
+### Additional Components
+
+TRIF utilizes Jetstream and Livewire for enhanced functionality and interactivity. Jetstream provides authentication scaffolding, including login, registration, and password reset features, while Livewire enables seamless, dynamic interactions between the frontend and backend without the need for JavaScript.
+
 
 ## Installation
 
